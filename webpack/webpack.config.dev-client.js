@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var styleLintPlugin = require('stylelint-webpack-plugin');
+// var styleLintPlugin = require('stylelint-webpack-plugin');
 var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
 var assetsPath = require('./common.config').assetsPath;
 var publicPath = require('./common.config').publicPath;
@@ -100,11 +100,6 @@ module.exports = {
         new webpack.DefinePlugin({
           __DEVCLIENT__: true,
           __DEVSERVER__: false
-        }),
-        new styleLintPlugin({
-          configFile: path.join(__dirname, '..', '.stylelintrc'),
-          context: path.join(__dirname, '..', 'app'),
-          files: '**/*.?(sa|sc|c)ss'
         })
     ],
     postcss: postCSSConfig
