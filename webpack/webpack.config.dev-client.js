@@ -23,13 +23,14 @@ var commonLoaders = [
     exclude: path.join(__dirname, '..', 'node_modules')
   },
   {
-    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
     loader: 'url',
     query: {
         name: '[hash].[ext]',
         limit: 10000,
-    }
-  }
+    },
+  },
+  { test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/, loader: 'imports-loader?jQuery=jquery' },
 ];
 
 var postCSSConfig = function () {

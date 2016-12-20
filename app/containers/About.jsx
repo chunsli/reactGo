@@ -25,6 +25,7 @@ const About = () => {
         &nbsp;could be improved, please create an issue&nbsp;
           <a target="_blank" href="https://github.com/choonkending/react-webpack-node/issues">here</a>!
         </p>
+        <a className="btn btn-primary btn-lg" href="https://github.com/choonkending/react-webpack-node">Learn more</a>
       </div>
     </div>
   );
